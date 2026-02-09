@@ -61,6 +61,6 @@ nameInput.addEventListener("input", () => {
 });
 
 btnCamila.addEventListener("click", () => {
-  camilaOut.textContent = camilaOut.textContent ? "" : "CAMILA GUAPA";
+  camilaOut.textContent = camilaOut.textContent ? "" : "REGRESA VALERIA";
 });
 
