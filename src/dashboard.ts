@@ -193,6 +193,10 @@ function renderDashboard(): string {
   return `
     ${renderHeader()}
     
+    <div style="text-align: center; padding: 2rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; color: white;">
+      <h1 style="font-size: 3rem; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">HOLA MUNDO</h1>
+    </div>
+    
     <main class="dashboard-main">
       <!-- Stats Grid -->
       <div class="dashboard-grid">
@@ -271,7 +275,7 @@ function initializeInteractivity(): void {
     tab.addEventListener('click', () => {
       filterTabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
-      
+
       // Simulate data refresh
       console.log(`Filtering by: ${tab.textContent}`);
     });
@@ -309,14 +313,14 @@ function simulateRealTimeUpdates(): void {
     // Simulate random stat updates
     const randomStat = statsData[Math.floor(Math.random() * statsData.length)];
     const statElement = document.querySelector(`.stat-card:nth-child(${statsData.indexOf(randomStat) + 1}) .stat-body h3`);
-    
+
     if (statElement && typeof randomStat.value === 'number') {
       const currentValue = parseInt(statElement.textContent || '0');
       const change = Math.floor(Math.random() * 5) - 2; // Random change between -2 and +2
       const newValue = Math.max(0, currentValue + change);
-      
+
       statElement.textContent = newValue.toString();
-      
+
       // Add pulse animation
       statElement.parentElement?.classList.add('fade-in');
       setTimeout(() => {
@@ -332,7 +336,7 @@ function simulateRealTimeUpdates(): void {
 
 function init(): void {
   const app = document.querySelector<HTMLDivElement>('#dashboard-app');
-  
+
   if (!app) {
     throw new Error('No se encontró #dashboard-app');
   }
