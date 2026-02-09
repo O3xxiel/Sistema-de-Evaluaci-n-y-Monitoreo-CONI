@@ -193,7 +193,7 @@ function renderDashboard(): string {
   return `
     ${renderHeader()}
     
-    <div style="text-align: center; padding: 2rem 0; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin: 0; color: white;">
+    <div style="text-align: center; padding: 2rem 0; background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%); margin: 0; color: white;">
       <h1 style="font-size: 3rem; font-weight: 700; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);">HOLA MUNDO</h1>
     </div>
     
